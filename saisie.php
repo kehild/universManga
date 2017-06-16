@@ -14,23 +14,23 @@ include_once "bdd/MangaManager.php";
 <div>
   <form method="post" action="">
     </br>
-	<label for="nom" style="color:black;">Nom</label>
+	<label for="nom">Nom</label>
     </br>
 	<input type="text" id="nom" name="nom">
 	</br>
-	<label for="tome" style="color:black;">Tome</label>
+	<label for="tome">Tome</label>
     </br>
 	<input type="text" id="tome" name="tome">
 	</br>
-	<label for="chapitre" style="color:black;">Chapitre</label>
+	<label for="chapitre">Chapitre</label>
     </br>
 	<input type="text" id="chapitre" name="chapitre">
 	</br>
-	<label for="datecreation" style="color:black;">Date de Creation</label>
+	<label for="datecreation">Date de Creation</label>
     </br>
 	<input type="text" id="datecreation" name="datecreation">
 	</br>
-    <label for="genre" style="color:black;">Genre</label>
+    <label for="genre">Genre</label>
     </br>
 	<select name="genre" id="genre">
            <option value="Seinen">Seinen</option>
@@ -42,7 +42,7 @@ include_once "bdd/MangaManager.php";
                   
 	</select>
 	</br>
-	<label for="statut" style="color:black;">Statut</label>
+	<label for="statut">Statut</label>
     </br>
 	<select name="statut" id="statut">
            <option value="En Cours">En Cours</option>
@@ -52,15 +52,15 @@ include_once "bdd/MangaManager.php";
                   
 	</select>
 	</br>
-	<label for="theme" style="color:black;">Thème</label>
+	<label for="theme">Thème</label>
     </br>
 	<input type="text" id="theme" name="theme">
 	</br>
-	<label for="format" style="color:black;">Format</label>
+	<label for="format">Format</label>
     </br>
 	<input type="text" id="format" name="format">
 	</br>
-	<label for="Resume" style="color:black;">Résumé</label>
+	<label for="Resume">Résumé</label>
 	</br>
 	<textarea name="Resume" rows="6" cols="60"></textarea>
 	</br>

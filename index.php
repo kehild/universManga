@@ -12,22 +12,22 @@
 				<div class="slideshow-container">
 					<div class="mySlides fade">
 					  <div class="numbertext">1 / 4</div>
-					  <img src="image/battle.jpg" style="width:100%">
+                                          <img src="image/fairy tail.jpg" style="width:100%">
 					</div>
 
 					<div class="mySlides fade">
 					  <div class="numbertext">2 / 4</div>
-					  <img src="image/vegeta.jpg" style="width:100%">
+                                          <img src="image/kuroko no basket.jpg" style="width:100%">
 					</div>
 
 					<div class="mySlides fade">
 					  <div class="numbertext">3 / 4</div>
-					  <img src="image/goul.jpg" style="width:100%">
+					  <img src="image/eva01.jpg" style="width:100%">
 					</div>
 
 					<div class="mySlides fade">
 					  <div class="numbertext">4 / 4</div>
-					  <img src="image/eva.jpg" style="width:100%">
+					  <img src="image/bleach.jpg" style="width:100%">
 				</div>
 			<br>
 			<div style="text-align:center">

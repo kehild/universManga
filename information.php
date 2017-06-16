@@ -3,6 +3,7 @@
 include_once "header.php";
 include_once "bdd/connexion.php";
 include_once "bdd/MangaManager.php";
+include_once "texte.php";
 
 	if (isset($_POST['export'])) {
 		

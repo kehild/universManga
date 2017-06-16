@@ -1,9 +1,9 @@
 body{
 	
-	background: url("image/dbz.jpg") no-repeat center fixed;
+	background: url("image/sao.png") no-repeat center fixed;
 	margin:0;
 	padding: 0;
-	-webkit-background-size: cover; /* pour Chrome et Safari */
+	-webkit-background-size: cover; /* pour Chrome et Safari */ //fairy tail.jpg
 	-moz-background-size: cover; /* pour Firefox */
 	-o-background-size: cover; /* pour Opera */
 	background-size: cover; /* version standardisée */
