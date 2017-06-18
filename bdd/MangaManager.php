@@ -759,8 +759,102 @@ function UpdateAchat($db){
 	}
 }
 
+function MangaATester($db){
+	
+		$stmt = $db->prepare("SELECT * FROM test"); 
+		$stmt->execute();
+					
+		echo "<table id='dernier' align='center'>";
+						
+		echo "<tr><th>"; echo "Manga à Tester"; echo "</th>";
+                echo "<th>"; echo "Modifier"; echo "</th>";
+                echo "<th>"; echo "Supprimer"; echo "</th></tr>";
+					
+		foreach(($stmt->fetchAll()) as $toto){
+					
+		echo "<tr><th>"; echo $toto['nom']; echo "</th>";
+		echo "<th>"; echo '<a href="ModifTest.php?id10='.$toto['id'].'"><img src="image/modifier.png"></a>'; echo "</th>";
+		echo "<th>"; echo '<a href="?id1='.$toto['id'].'"><img src="image/delete.png"></a>'; echo "</th></tr>";  
+					
+		}
+		echo "</table>";
+	
+}
 
 
+function InsertTest($db){
+	
+		try {
+		$sql = "Insert INTO test (nom) VALUES ('" .$_POST['nom']. "')";
+		$db->exec($sql);
+						
+		echo "Modification réussi";
+		echo '<meta http-equiv="refresh" content="0;URL=mangaTest.php">';		
+		}
+		catch(Exception $e){
+				
+		echo("<h1>Erreur : Base de données </h1>");
+		die('Erreur : ' .$e->getMessage());
+			
+	}
+}
+
+// Suppression Tome a acheter
+
+function DeleteTest($db){
+	
+	try {
+
+		$stm = $db->prepare("delete from test where id=' " .$_GET['id1']. " '"); 
+		$stm->execute();
+				
+	}catch(Exception $e){
+				
+		echo("<h1>Erreur : Base de données </h1>");
+		die('Erreur : ' .$e->getMessage());
+			
+	}
+		echo '<meta http-equiv="refresh" content="0;URL=mangaTest.php">';
+}
+
+function modificationTest($db){
+	
+		$stmt = $db->prepare("SELECT * FROM test where id=' " .$_GET['id10']. " '"); 
+		$stmt->execute();
+				
+		foreach(($stmt->fetchAll()) as $toto){
+		?>
+		<div>
+                    <form method="post" action="">
+                        </br>
+                        <label for="nom">Nom</label>
+                        </br>
+                        <input type="text" id="nom" name="nom" value="<?php echo $toto['nom']; ?>">
+                        <input type="submit" name="Modifier" value="Modifier">
+                    </form>
+                </div> 
+    <?php
+		}					
+}
+
+function UpdateTest($db){
+	
+		try {
+
+		$sql = "UPDATE test SET nom='" .$_POST['nom']. "' WHERE id='" .$_GET['id10']. "'";
+			
+		$db->exec($sql);
+				
+		echo "Modification réussi";
+		echo '<meta http-equiv="refresh" content="0;URL=mangaTest.php">';
+		}
+		catch(Exception $e){
+			
+		echo("<h1>Erreur : Base de données </h1>");
+		die('Erreur : ' .$e->getMessage());
+			
+	}
+}
 
 
 }

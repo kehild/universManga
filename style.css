@@ -219,7 +219,7 @@ div {
 
 /* Bouton de Modification d'anime */
 
-#Modifier, #Annuler, #Email, #Insertion{
+#Modifier, #Annuler, #Email, #Insertion, #retour, #valider{
 
 	border-radius: 2px;
 	background-color: #333;

@@ -1,20 +1,38 @@
 <?php
-
 include_once "header.php";
-
+include_once 'bdd/connexion.php';
+include_once 'bdd/MangaManager.php';
 ?>
 <section>
 	<div class="transbox">
 		<div id="param">
-			<a href="ModifText.php" ><img src="image/param.png"></a>
-			<div id="doc">
-				<?php
-				$myfile = fopen("manga.txt", "r") or die("Unable to open file!");
-				echo nl2br(utf8_encode(fread($myfile,filesize("manga.txt"))));
-				fclose($myfile);
-				?>
-			</div>
+                    <?php
+                    $manga = new MangaManager($db);
+                    $manga->MangaATester($db);    
+                    
+                    if(isset($_POST['nom'])){
+                        $manga = new MangaManager($db);
+                        $manga->InsertTest($db);
+                    }
+                    
+                    if (isset($_GET['id1'])){
+                        $manga->DeleteTest($db);
+                    }
+                    
+                    ?>    
+                    <div>
+			<form method="post" action="">
+				</br>
+				<label for="nom" style="color:black;">Manga à Tester</label>
+				</br>
+				<input type="text" id="nom" name="nom">
+				</br>
+				<input type="submit" id="retour" name="Retour" value="Retour">
+				<input type="submit" id="valider" name="Valider" value="Valider">
+				</br>
+			</form>
 		</div>
+            </div>
 	</div>
 </section>
 <?php
