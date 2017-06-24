@@ -16,10 +16,6 @@ include_once "texte.php";
 		<div class="transbox">
 			<p style="text-align:left"><?php echo $info; ?>
 			</p>
-			<form method="post" action="">
-				</br>
-				<input type="submit" name="export" value="Exporter la base de données">
-			</form>
 		</div>
 	</section>
 </body>
