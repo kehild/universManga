@@ -3,7 +3,6 @@
 $txtintro = "Présentation Manga Lu avec informations sur eux : nom, tome, chapitre ,date de creation, genre, statut, thème, resumé, format";
 $enpause = "En Pause";
 $abandonne = "Abandonnée";
-
 $info = "Ce Site est sur les manga lu : </br> </br>
 - Saisie des Manga</br>
 - Modification et Suppression </br>

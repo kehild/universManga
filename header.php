@@ -32,8 +32,21 @@
 			<span style=" color:white; text-align: center;">Recherche par nom :</span> 
 			<input "type="text" id="search" name="search"/>
 		</form>
-		
-		<li style="float:right"><a href="information.php">Information</a>
+                
+                <li style="float: left"><a href="#">Recherche Avance</a>
+                    <ul> 
+                        <form style="width:400px; color:white;" action="search_avance.php" method="post">
+                                <label for="critere">Theme</label></br></br>
+                                <input type="checkbox" name="genre" value="Ecchi">Ecchi
+                                <input type="checkbox" name="genre" value="Shonen">Shonen
+                                <input type="checkbox" name="genre" value="Shojo">Shojo
+                                <input type="checkbox" name="genre" value="Shonen Ai">Shonen Ai
+                                <input type="checkbox" name="genre" value="Light Novel">Light Novel
+                                <input type="checkbox" name="genre" value="Seinen">Seinen</br>
+                                <input type="submit" name="Valider" value="Valider"> 
+                        </form>
+                    </ul>
+                </li> 
 		<li style="float:right"><a href="mangaTest.php">Manga Test</a>
 	</ul>
 </nav>

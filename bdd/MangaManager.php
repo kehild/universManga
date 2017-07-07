@@ -787,6 +787,53 @@ function UpdateTest($db){
 	}
 }
 
+/* Système de Recherche Avance */ 
+
+ public function SearchAvance($db){
+      
+      if(isset($_POST['genre'])) {
+
+		$chainesearch = addslashes($_POST['genre']);  
+                
+		$requete = "SELECT * from manga WHERE genre='$chainesearch'";
+                
+		// Exécution de la requête SQL
+		$resultat = $db->query($requete) or die(print_r($db->errorInfo()));
+		//echo 'Les résultats de recherche sont : <br />';     
+		$nb = 0;
+		echo "<table id='dernier' align='center'>";
+					
+                        echo "<table id='dernier' align='center'>";
+			echo "<tr><th>"; echo "Nom"; echo "</th>";
+			echo "<th>"; echo "Tome"; echo "</th>";
+			echo "<th>"; echo "Chapitre"; echo "</th>";
+			echo "<th>"; echo "Date Creation"; echo "</th>";
+			echo "<th>"; echo "Genre"; echo "</th>";
+			echo "<th>"; echo "Thème"; echo "</th>";
+			echo "<th>"; echo "Format"; echo "</th>";
+			echo "<th>"; echo "Modifier"; echo "</th>";
+			echo "<th>"; echo "Supprimer"; echo "</th></tr>";
+								
+			while($donnees = $resultat->fetch(PDO::FETCH_ASSOC)) {       
+			$nb = $nb +1;
+								
+			echo "<tr><th>"; echo $donnees['nom']; echo "</th>";
+			echo "<th>"; echo $donnees['tome']; echo "</th>";
+			echo "<th>"; echo $donnees['chapitre']; echo "</th>";
+			echo "<th>"; echo $donnees['datecreation']; echo "</th>";
+			echo "<th>"; echo $donnees['genre'];  echo "</th>";
+			echo "<th>"; echo $donnees['theme']; echo "</th>";
+			echo "<th>"; echo $donnees['format']; echo "</th>";
+		echo "<th>"; echo '<a href="ModifManga.php?id='.$donnees['id'].'"><img src="image/modifier.png"></a>'; echo "</th>";
+		echo "<th>"; echo '<a href="?id1='.$donnees['id'].'"><img src="image/delete.png"></a>'; echo "</th></tr>";    
+		}
+		echo "</table>";
+		echo "</br>";
+		echo "Il y a ".$nb." résultats"; 
+						
+                }
+  }
+
 
 }
 
