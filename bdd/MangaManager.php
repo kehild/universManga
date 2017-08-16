@@ -374,6 +374,11 @@ function SaisieManga($db,$nom,$tome,$chapitre,$datecreation,$genre,$statut,$them
 	// Permet de rentrer les manga
 	
 	try {
+            
+                $resume = $_POST['Resume'];
+		$resume = str_replace("'", "\'", $resume);
+		$resume = str_replace("’", " ", $resume);
+            
 
 		$sql = "Insert INTO manga (nom, tome, chapitre, datecreation, genre, statut, theme, Resume, format) VALUES ('" .$nom. "', '" .$tome. "','" .$chapitre. "','" .$datecreation. "','" .$genre. "','" .$statut. "','" .$theme. "','" .$resume. "','" .$format. "')";
 			

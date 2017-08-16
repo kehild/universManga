@@ -5,7 +5,7 @@ include_once "bdd/connexion.php";
 include_once "bdd/MangaManager.php";
 
  if (isset($_POST['Valider'])) {
-	 $manga = new MangaManager($db);
+	$manga = new MangaManager($db);
 	$manga->SaisieManga($db,$_POST['nom'],$_POST['tome'],$_POST['chapitre'],$_POST['datecreation'],$_POST['genre'],$_POST['statut'],$_POST['theme'],$_POST['format'],$_POST['Resume']);
 }
 
