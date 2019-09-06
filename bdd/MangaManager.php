@@ -451,8 +451,8 @@ function MailAchat($db){
 	$mail->IsSMTP();
 	$mail->SMTPSecure = 'tls'; //Set the encryption system to use - ssl (deprecated) or tls
 	$mail->SMTPAuth = true; //Whether to use SMTP authentication
-	$mail->Username = 'josselindaeye@gmail.com';
-	$mail->Password = 'duffy1949';
+	$mail->Username = '';
+	$mail->Password = '';
 	$mail->AddAddress('josselindaeye@gmail.com', 'Univers Manga'); // Destinataire
 	$mail->SetFrom('josselindaeye@gmail.com', 'Univers Manga');  //Expéditeur
 	$mail->Subject = "Tome a acheter"; // Sujet
